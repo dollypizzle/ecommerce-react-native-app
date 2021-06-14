@@ -4,7 +4,6 @@ import {
   ScrollView,
   Button,
   StyleSheet,
-  Platform,
   Alert,
   ActivityIndicator
 } from 'react-native';
@@ -76,17 +75,17 @@ const EditProductScreen = (props: any) => {
     setIsLoading(true);
     try {
       if (editedProduct) {
-        await dispatch(
+        dispatch(
           productsActions.updateProduct(
             prodId,
             formState.inputValues.name,
             formState.inputValues.description,
             formState.inputValues.image,
-            formState.inputValues.brand,
+            formState.inputValues.brand
           )
         );
       } else {
-        await dispatch(
+        dispatch(
           productsActions.createProduct(
             formState.inputValues.name,
             formState.inputValues.description,
