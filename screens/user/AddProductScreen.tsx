@@ -72,15 +72,15 @@ const AddProductScreen = (props: any) => {
     setIsLoading(true);
     try 
        {
-        await dispatch(
-          productsActions.createProduct(
-            formState.inputValues.name,
-            formState.inputValues.description,
-            formState.inputValues.image,
-            formState.inputValues.brand,
-            +formState.inputValues.price
-          )
-        );
+        dispatch(
+        productsActions.createProduct(
+          formState.inputValues.name,
+          formState.inputValues.description,
+          formState.inputValues.image,
+          formState.inputValues.brand,
+          +formState.inputValues.price
+        )
+      );
         props.navigation.goBack();
       } catch (err) {
       setError(err.message);

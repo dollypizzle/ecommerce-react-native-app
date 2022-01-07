@@ -45,7 +45,6 @@ export const fetchProducts = () => {
       });
      
     } catch (err) {
-      // send to custom analytics server
       throw err;
     }
   };
@@ -72,7 +71,6 @@ export const deleteProduct = (productId: any) => {
 
 export const createProduct = (name: any, image: any, brand: any, description: any, price: number) => {
   return async (dispatch: (arg0: { type: string; productData: { id: any; name: any; image: any; brand: any; description: any; price: any; ownerId: any; }; }) => void) => {
-    // any async code you want!
     const user: any = await AsyncStorage.getItem('user');
     const token = await AsyncStorage.getItem('jwtToken');
     const response = await fetch(

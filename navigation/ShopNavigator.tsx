@@ -27,18 +27,6 @@ const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
-// const defaultNavOptions = {
-//   headerStyle: {
-//     backgroundColor: Platform.OS === 'android' ? Colors.primary : ''
-//   },
-//   headerTitleStyle: {
-//     fontFamily: 'open-sans-bold'
-//   },
-//   headerBackTitleStyle: {
-//     fontFamily: 'open-sans'
-//   },
-//   headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primary
-// };
 
 const ProductsStack = (props: any) => {
   return (
@@ -86,7 +74,6 @@ const ProductsStack = (props: any) => {
         name="Product Details" 
         component={ProductDetailScreen}
         options={{
-          // headerTitle: navData.route.params.productName,
           headerStyle: {
             backgroundColor: Platform.OS === 'android' ? Colors.primary : ''
           },
